@@ -47,7 +47,8 @@ var ServerSetting = &Server{}
 
 func init() {
 	var err error
-	Cfg, err = ini.Load("ginblog/conf/app.ini")
+
+	Cfg, err = ini.Load("C:\\Users\\Administrator\\go\\src\\ginblog\\conf\\app.ini")
 	if err != nil {
 		log.Fatalf("Fail to parse 'conf/app.ini': %v", err)
 	}
