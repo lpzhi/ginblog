@@ -26,7 +26,9 @@ func InitRouter() *gin.Engine  {
 		//删除指定标签
 		apiv1.DELETE("/tags/:id", v1.DeleteTag)
 
+		//创建数据表
 		apiv1.GET("roletotal", v1.CreateRoleTotal)
+		apiv1.GET("enterlog", v1.CreateEnterLog)
 	}
 
 	return r
