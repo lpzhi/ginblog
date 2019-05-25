@@ -12,3 +12,8 @@ func GetTagTotal() (count int)  {
 	db.Model(&Tag{}).Count(&count)
 	return
 }
+
+func GetTags(pageNum,pageSize int,maps interface{}) (tags []Tag)  {
+	db.Debug().Where(maps).Offset(pageNum).Limit(pageSize).Find(&tags)
+	return
+}
